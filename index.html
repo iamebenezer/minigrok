@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Meet Minigrok! The Baby Brain of the Blockchain!</title>
+
+    <!-- SEO Meta Tags -->
+  
+    <!-- Viewport -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="format-detection" content="telephone=no">
+
+    <!-- Favicon and Touch Icons -->
+    <link rel="shortcut icon" type="image/png" href="/sa.jpg">
+    <link rel="icon" type="image/png" sizes="64x64" href="/sa.jpg">
+    <link rel="icon" type="image/png" sizes="32x32" href="/sa.jpg">
+    <link rel="apple-touch-icon" sizes="256x256" href="/sa.jpg">
+    <meta name="theme-color" content="#000000">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/brands.min.css" integrity="sha512-58P9Hy7II0YeXLv+iFiLCv1rtLW47xmiRpC1oFafeKNShp8V5bKV/ciVtYqbk2YfxXQMt58DjNfkXFOn62xE+g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- CSS and styles -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/animate.min.css">
+    <link rel="stylesheet" href="assets/css/fontawesome-all.min.css">
+    <link rel="stylesheet" href="assets/css/mCustomScrollbar.min.css">
+    <link rel="stylesheet" href="assets/css/odometer.css">
+    <link rel="stylesheet" href="assets/css/slick.css">
+    <link rel="stylesheet" href="assets/css/default.css">
+    <link rel="stylesheet" href="assets/css/style.css?ver=0.17">
+    <link rel="stylesheet" href="assets/css/responsive.css">
+
+    <script>
+        document.addEventListener("touchstart", function() {}, true);
+    </script>
+
+    <script>
+        async function addToken() {
+
+            const tokenAddress = '0xbd708BB84a6cD17528EE31D1ef9F812C2188A747';
+            const tokenSymbol = 'USAM';
+            const tokenDecimals = 8;
+            const tokenImage = 'https://usamcoin.com/assets/img/logo/usam_logo.png';
+
+            try {
+                const wasAdded = await window.ethereum.request({
+                    method: 'wallet_watchAsset',
+                    params: {
+                        type: 'ERC20',
+                        options: {
+                            address: tokenAddress,
+                            symbol: tokenSymbol,
+                            decimals: tokenDecimals,
+                            image: tokenImage,
+                        },
+                    },
+                });
+
+                if (wasAdded) {
+                    console.log('Thanks for your interest!');
+                } else {
+                    console.log('Your loss!');
+                }
+            } catch (error) {
+                console.log(error);
+            }
+        }
+    </script>
+
+</head>
+
+<body>
+
+    <!-- Preloader 
+        <div id="preloader">
+            <div class="spinner">
+                <div class="rect1"></div>
+                <div class="rect2"></div>
+                <div class="rect3"></div>
+                <div class="rect4"></div>
+                <div class="rect5"></div>
+            </div>
+        </div> -->
+
+    <!-- Header -->
+    <header id="header">
+        <div id="header-fixed-height"></div>
+        <div id="sticky-header" class="menu-area">
+            <div class="container custom-container">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="mobile-nav-toggler"><i class="fas fa-bars"></i></div>
+                        <div class="menu-wrap">
+                            <nav class="menu-nav">
+                                <div class="logo">
+                                    <a href="/">
+                                        <img src="assets/img/images/uncle_sam_hat.png" alt="Official website of" width="110"></a>
+                                </div>
+                                <div class="navbar-wrap main-menu d-none d-lg-flex">
+                                    <ul class="navigation">
+                                        <li class="active menu-item-has-children"><a href="#header" class="section-link">home</a></li>
+                                        <li><a href="#about" class="section-link">about</a></li>
+                                        <li><a href="#tokenomics" class="section-link">tokenomics</a></li>
+                                        <li><a href="#howtobuy" class="section-link">how to buy</a></li>
+                                        <li><a href="#contract" class="section-link">contract address</a></li>
+                                        <li><a href="https://www.dextools.io/app/en/ether/pair-explorer/0xbd708BB84a6cD17528EE31D1ef9F812C2188A747?t=1745617997037" target="_blank">Dextools</a></li>
+                                    </ul>
+                                </div>
+                                <div class="header-action d-none d-md-block">
+                                    <li class="header-btn"><a href="https://app.uniswap.org/explore/tokens/ethereum/0xbd708BB84a6cD17528EE31D1ef9F812C2188A747" target="_blank" class="btn">Buy $MINIGROK
+</a></li>
+
+                                </div>
+                            </nav>
+                        </div>
+
+                        <!-- Mobile Menu  -->
+                        <div class="mobile-menu">
+                            <nav class="menu-box">
+                                <div class="close-btn"><i class="fas fa-times"></i></div>
+                                <div class="nav-logo"><img src="assets/img/logo/logos.png" width="110" alt="Official website of  American Memecoin (USAM)">
+                                </div>
+                                <div class="menu-outer">
+                                </div>
+                                <div class="social-links">
+                                    <ul class="clearfix">
+                                        <a href="https://x.com/usamcoincom" target="_blank"><img src="assets/img/icon/logo-x.png" alt=" Coin in Twitter" width="60" class="me-3"></a>
+                                        <a href="https://t.me/minigrokcto" target="_blank"><img src="assets/img/icon/logo-telegram.png" alt="USAM in Telegram" width="60" class="ms-3"></a>
+                                    </ul>
+                                </div>
+                            </nav>
+                        </div>
+                        <div class="menu-backdrop"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Page -->
+    <main class="fix">
+
+        <!-- Home -->
+        <section class="banner-area banner-bg">
+            <div class="banner-shape-wrap">
+                <!-- <img src="assets/img/images/uncle_sam_1.webp" alt=" American Meme" class="img-one"> -->
+                <img src="assets/img/images/uncle_sam_hat.png" alt="'s hat" class="img-three">
+            </div>
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-10">
+                        <div class="banner-content text-center pt-2">
+                            <img src="assets/img/bg/lead.png" alt="Live American Dream - Lead your destiny">
+                            <h2 class="title">Born from the digital DNA of Elon’s AI brainchild Grok, Minigrok</h2>
+                        </div>
+                    </div>
+                </div>
+                <!-- <div class="row justify-content-center">
+                    <div class="col-xl-10">
+                        <div class="banner-countdown-wrap text-center">
+                            <h2 class="title">until 's Day:</h2>
+                            <div class="coming-time" data-countdown="2025/9/13"></div>
+                        </div>
+                    </div>
+                </div> -->
+            </div>
+        </section>
+
+        <!-- About -->
+        <section id="about" class="about-area v2-area-bg pt-130">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-6">
+                        <div class="about-img wow fadeInLeft" data-wow-delay=".2s">
+                            <img src="assets/img/images/welcome_usam.png" alt=" Coin">
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="about-content wow fadeInRight" data-wow-delay=".2s">
+                            <div class="section-title mb-30">
+                                <span class="sub-title">about $MINIGROK
+</span>
+                                <!-- <h2 class="title">welcome to  Memecoin</h2> -->
+                            </div>
+                            <p>Born from the digital DNA of Elon’s AI brainchild Grok, Minigrok is the tiny, chaotic, meme-fueled offspring nobody asked for… but everybody’s watching.
+
+                                He's still learning, still babbling, and still drooling on the blockchain but don’t underestimate him. This baby bot has big dreams, small gas fees, and a meme game stronger than most adults.
+                            
+                                    <br><br>
+                                    While Grok is busy answering questions with logic and wit, Minigrok is throwing tantrums, posting dank memes, and trying to crawl his way to the moon (with your help, of course).
+
+
+                            </p>
+                            <a href="" target="_blank" class="btn">Buy $MINIGROK
+</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- Find Us -->
+            <div class="partner-area pt-130 pb-100">
+                <div class="container">
+                    <div class="row justify-content-center">
+                        <div class="col-lg-8">
+                            <div class="section-title text-center mb-10">
+                                <span class="sub-title">find $MINIGROK
+</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="partner-wrap">
+                                <ul>
+                                    <li><a href="https://dexscreener.com/ethereum/0xa97e1adabbc58851929e3bd72372162926ecab59" target="_blank">
+                                        <img src="assets/img/cryptomarkets/dexscreener-v4.webp" alt=" on Dextools" width="192"></a>
+                                    </li>
+                                  
+                                    <li><a href="https://app.uniswap.org/explore/tokens/ethereum/0xa97e1adabbc58851929e3bd72372162926ecab59" target="_blank"><img src="assets/img/cryptomarkets/uniswap-v.webp" alt="Buy  coin on Uniswap" width="192"></a></li>
+                                    <li><a href="https://etherscan.io/token/0xa97e1adabbc58851929e3bd72372162926ecab59" target="_blank"><img src="assets/img/cryptomarkets/etherscan-v.webp" alt="Check USAM contract on Etherium" width="192"></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="container custom-container-four pt-100">
+                        <div class="row justify-content-center">
+                            <div class="col-lg-6">
+                                <div class="section-title text-center mb-100">
+                                    <h2 class="title">why <span>$</span>Minigrok</h2>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-4 col-sm-6">
+                                <div class="choose-item-two wow fadeInUp" data-wow-delay=".2s">
+                                   
+                                    <div class="choose-content">
+                                       <p> Because every genius AI needs a baby brother who eats crayons and moonshots.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-sm-6">
+                                <div class="choose-item-two wow fadeInUp" data-wow-delay=".4s">
+                                   
+                                    <div class="choose-content">
+                                        <p> Because meme coins are more fun when they don’t take themselves too seriously.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-sm-6">
+                                <div class="choose-item-two wow fadeInUp" data-wow-delay=".6s">
+                                   
+                                    <div class="choose-content">
+                                        <p> Because every cycle, there's that one weird little coin that surprises everyone.</p>
+                                    </div>
+                                </div>
+                            </div>
+                          
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Tokenomics -->
+        <!-- <section id="tokenomics" class="chart-area chart-bg jarallax">
+            <div class="container">
+                <div class="chart-inner">
+                    <div class="row align-items-center justify-content-center">
+                        <div class="col-lg-6 col-md-10 order-0 order-lg-2">
+                            <div class="chart-wrap wow fadeInRight" data-wow-delay=".2s">
+                                <img src="assets/img/images/token.webp" alt="Tokenomics of the  American Memecoin (USAM)">
+                                <ul>
+                                    <li>Liquidity Pool: 70%</li>
+                                    <li>Developers & Team: 11%</li>
+                                    <li>CEX & Partnerships: 12%</li>
+                                    <li>Marketing & Community Initiatives: 7%</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-md-10">
+                            <div class="chart-content wow fadeInLeft" data-wow-delay=".2s">
+                                <ul class="nav nav-tabs" id="myTab" role="tablist">
+                                    <li class="nav-item" role="presentation">
+                                        <button class="nav-link active" id="funding-tab" data-bs-toggle="tab" data-bs-target="#funding" type="button" role="tab" aria-controls="funding" aria-selected="true">total supply:</button>
+                                    </li>
+                                    <li class="nav-item" role="presentation">
+                                        <button class="nav-link" id="token-tab" data-bs-toggle="tab" data-bs-target="#token" type="button" role="tab" aria-controls="token" aria-selected="false">$MINIGROK
+ start liquidity</button>
+                                    </li>
+                                </ul>
+                                <div class="tab-content" id="myTabContent">
+                                    <div class="tab-pane fade show active" id="funding" role="tabpanel" aria-labelledby="funding-tab">
+                                        <div class="chart-content-inner">
+                                            <h2 class="title">313.185.200.000</h2>
+                                      
+                                            <a href="https://app.uniswap.org/explore/tokens/ethereum/0xbd708BB84a6cD17528EE31D1ef9F812C2188A747" target="_blank" class="btn">Buy $MINIGROK
+</a>
+                                        </div>
+                                    </div>
+                                    <div class="tab-pane fade" id="token" role="tabpanel" aria-labelledby="token-tab">
+                                        <div class="chart-content-inner">
+                                            <h2 class="title">219.229.640.000</h2>
+                                        
+                                            <a href="https://app.uniswap.org/explore/tokens/ethereum/0xbd708BB84a6cD17528EE31D1ef9F812C2188A747" target="_blank" class="btn" style="background-color:#007FF4;">Buy $MINIGROK
+</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section> -->
+
+        <!-- How to buy -->
+
+        <section id="howtobuy" class="roadmap-area pt-130 pb-130 v1-area-bg">
+            <div class="container custom-container-two">
+                <div class="row justify-content-center">
+                    <div class="col-xl-5 col-lg-8">
+                        <div class="section-title text-center mb-60">
+                            <span class="sub-title">how to buy</span>
+                            <h2 class="title">buying $MINIGROK
+ is <span>simple</span>! just follow these steps:</h2>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="bt-roadmap_x">
+                            <div class="bt-roadmap-wrap">
+                                <div class="bt-roadmap-item">
+                                    <span class="roadmap-title">1. set up a wallet</span>
+                                    <div class="roadmap-content">
+                                        <span class="dot"></span>
+                                        <span>Download and install Uniswap, MetaMask, Trust Wallet, or any other ERC-20-compatible wallet. Make sure your wallet is connected to the Ethereum (ERC-20) network.</span>
+                                    </div>
+                                </div>
+                                <div class="bt-roadmap-item">
+                                    <span class="roadmap-title">2. fund your wallet with ETH</span>
+                                    <div class="roadmap-content">
+                                        <span class="dot"></span>
+                                        <span>Purchase or transfer ETH to your wallet. You’ll need it to swap for $MINIGROK
+ and cover gas fees.</span>
+                                    </div>
+                                </div>
+                                <div class="bt-roadmap-item">
+                                    <span class="roadmap-title">3. go to uniswap (DEX)</span>
+                                    <div class="roadmap-content">
+                                        <span class="dot"></span>
+                                        <span>Visit Uniswap and connect your wallet.</span>
+                                    </div>
+                                </div>
+                                <div class="bt-roadmap-item">
+                                    <span class="roadmap-title">4. swap ETH for $MINIGROK
+</span>
+                                    <div class="roadmap-content">
+                                        <span class="dot"></span>
+                                        <span>Paste the $MINIGROK
+ contract address, enter the amount of ETH you want to swap, and confirm the transaction.</span>
+                                    </div>
+                                </div>
+                                <div class="bt-roadmap-item">
+                                    <span class="roadmap-title">5. hodl & join the movement</span>
+                                    <div class="roadmap-content">
+                                        <span class="dot"></span>
+                                        <span>Your $MINIGROK
+ tokens will be automatically added to your wallet.</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- Contract address -->
+            <div id="contract" class="contact-area pt-130">
+                <div class="container">
+                    <div class="row justify-content-center">
+                        <div class="col-lg-8">
+                            <div class="section-title text-center">
+                                <h2 class="title" style="font-family: head;">ethereum <span>contract</span> address</h2>
+                                <div class="contract-form" style="font-family: texts;">
+                                    <b onclick="navigator.clipboard.writeText('0xbd708BB84a6cD17528EE31D1ef9F812C2188A747')" class="icon-copy"><span style="font-family: texts">0xbd708BB84a6cD17528EE31D1ef9F812C2188A747
+                                        
+                                        <i class="fas fa-clone ms-5"></i></span></b></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-area">
+            <div class="container">
+                <div class="footer-scroll-wrap">
+                    <button class="scroll-to-target" data-target="html"><i class="fas fa-arrow-up"></i></button>
+                </div>
+                <div class="footer-top">
+                    <div class="row">
+                        <div class="col-xl-3 col-lg-4 col-md-6">
+                            <div class="footer-widget wow fadeInUp" data-wow-delay=".2s">
+                                <!-- <a href="/" class="f-logo">
+                                    <img src="assets/img/logo/logos.png" alt="USAM -  Americam Memecoin official website" width="110"></a> -->
+                                <div class="footer-content">
+                                    <p>Get in early. Hold tight. And enjoy the ride as this baby bot takes its first steps across the blockchain jungle.</p>
+                                    <ul class="footer-social pt-3">
+                                        <a href="" target="_blank"><img src="assets/img/icon/logo-x.png" alt=" in X.com (Twitter)" width="55" class="me-3"></a>
+                                        <a href="https://t.me/minigrokcto" target="_blank"><img src="assets/img/icon/logo-telegram.png" alt="USAM in Telegram" width="55" class="ms-3"></a>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-3 col-lg-5 col-sm-6">
+                            <div class="footer-widget  wow fadeInUp" data-wow-delay=".4s">
+                                <h4 class="fw-title">menu</h4>
+                                <div class="footer-link">
+                                    <ul>
+                                        <li><a href="#header">home</a></li>
+                                        <li><a href="#about">about</a></li>
+                                        <li><a href="#tokenomics">tokenomics</a></li>
+                                        <li><a href="#howtobuy">how to buy</a></li>
+                                        <li><a href="#contract">contract address</a></li>
+                             
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- <div class="col-xl-4 col-lg-4 col-md-6">
+                            <div class="footer-widget wow fadeInUp" data-wow-delay=".8s">
+                                <h4 class="fw-title">disclaimer</h4>
+                                <div class="footer-newsletter">
+                                    <p> $MINIGROK
+ ( American Meme) is not affiliated with, endorsed by, or connected to the U.S. government, any government entity, or any financial institution. Despite the name, the token has no ties to , the
+                                        U.S. Treasury, or any official organizations. <br>$MINIGROK
+ is a decentralized token with no owner, no taxes, and full transparency. Pure freedom, honest trades, and the way  would want it!</p>
+                                </div>
+                            </div>
+                        </div> -->
+                    </div>
+                </div>
+                <div class="footer-bottom">
+                    <div class="row align-items-center">
+                        <div class="col-lg-6">
+                            <div class="copyright-text">
+                                <p>$MINIGROK
+ &copy; 2025 Minigrok</p>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 d-sm-block">
+                            <div class="footer-menu">
+                                <ul>
+                                  
+                                    <li><a href="https://app.uniswap.org/explore/tokens/ethereum/0xa97e1adabbc58851929e3bd72372162926ecab59
+                                        " target="_blank">BUY / SELL</a></li>
+                                 
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JS Bootstrap -->
+    <script src="assets/js/vendor/jquery-3.6.0.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/jquery.odometer.min.js"></script>
+    <script src="assets/js/jquery.countdown.min.js"></script>
+    <script src="assets/js/jquery.knob.min.js"></script>
+    <script src="assets/js/jquery-countdowngampang.min.js"></script>
+    <script src="assets/js/jquery.ba-throttle-debounce.min.js"></script>
+    <script src="assets/js/jquery.mCustomScrollbar.min.js"></script>
+    <script src="assets/js/jarallax.min.js"></script>
+    <script src="assets/js/jquery.appear.js"></script>
+    <script src="assets/js/jquery.easing.js"></script>
+    <script src="assets/js/slick.min.js"></script>
+    <script src="assets/js/wow.min.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script defer src="https://static.cloudflareinsights.com/beacon.min.js/vcd15cbe7772f49c399c6a5babf22c1241717689176015" integrity="sha512-ZpsOmlRQV6y907TI0dKBHq9Md29nnaEIPlkf84rnaERnq6zvWvPUqr2ft8M1aS28oN72PdrCzSjY4U6VaAw1EQ==" data-cf-beacon='{"rayId":"936d69652bdc13d3","version":"2025.4.0-1-g37f21b1","r":1,"token":"07acd8c49dda4f2d93f2ac22a88908a6","serverTiming":{"name":{"cfExtPri":true,"cfL4":true,"cfSpeedBrain":true,"cfCacheStatus":true}}}'
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
